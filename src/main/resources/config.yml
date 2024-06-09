@@ -1,0 +1,13 @@
+place:
+  world: "world"
+  teleport:
+    x: 0
+    y: 100
+    z: 0
+  size: 40
+  bottom_y: 90
+  height: 40
+contents:
+  - "Plane"
+  - "Car"
+  - "Train"
