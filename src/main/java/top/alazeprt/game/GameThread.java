@@ -73,7 +73,6 @@ public class GameThread {
             theme = null;
             builder = null;
             running = false;
-            thread.interrupt();
         });
         thread.start();
     }
