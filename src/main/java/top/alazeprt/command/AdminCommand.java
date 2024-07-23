@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import top.alazeprt.game.GameThread;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminCommand implements CommandExecutor {
@@ -23,7 +24,9 @@ public class AdminCommand implements CommandExecutor {
             return true;
         }
         long time = Long.parseLong(strings[0]);
-        GameThread.start((List<Player>) Bukkit.getOnlinePlayers(), time);
+        List<Player> list = new ArrayList<>();
+        Bukkit.getOnlinePlayers().forEach(player -> list.add(player));
+        GameThread.start(list, time);
         return false;
     }
 }
